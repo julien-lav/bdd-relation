@@ -1,0 +1,14 @@
+<div class="container">
+
+
+<h1>Edit comment </h1>
+
+<%= form_for([@post, @comment]) do |f| %>
+<div class="form-group">
+
+<%= f.text_field :body, class: "form-control" %>
+</div>
+	<%= f.submit "edite ton commentaire", class: "btn btn-primary" %>
+<% end %>
+
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+<h2> <%= @post.title %> </h2>
+<p> <%= @post.body %> </p>
+<span><%= time_ago_in_words(@post.created_at) %> </span>
+
+<h3> Commentaire</h3>
+<%= render @post.comments %>
+<%= render 'comments/form' %>
+<br>
+<%= link_to "edit", edit_post_path(@post),  class: "btn btn-primary"%>
+<%= link_to "Home", root_path, class: "btn btn-primary" %>
+<%= link_to "suprimer", post_path(@post), method: :delete, data: { confirm: "tu es sur ?"}, class: "btn btn-danger" %>
+</div>

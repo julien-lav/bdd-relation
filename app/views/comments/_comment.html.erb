@@ -1,0 +1,5 @@
+<p><%= comment.body %></p>
+ <%= link_to "edit", edit_post_comment_path(comment.post, comment),class: "btn btn-info"  %>
+ <span style="margin-left:5px;"></span>
+ <%= link_to "suprimer", post_comment_path(comment.post, comment), method: :delete, class: "btn btn-danger" %>
+ <div style="margin-top: 20px;"></div>
